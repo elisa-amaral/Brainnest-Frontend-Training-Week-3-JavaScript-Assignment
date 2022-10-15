@@ -34,7 +34,7 @@ If the player chooses to play again, the broswer Console is cleared and the game
 
 ## Project Link
 
-**coming soon**
+https://elisa-amaral.github.io/Brainnest-Front-End-Training-Week-3-JavaScript-Assignment/
 
 ## Technology Stack
 
