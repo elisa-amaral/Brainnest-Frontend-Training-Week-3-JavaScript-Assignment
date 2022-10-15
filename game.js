@@ -329,7 +329,6 @@ function game()
 
         }, milliseconds);
 
-
     } // end of for loop
 
     setTimeout( () => {
