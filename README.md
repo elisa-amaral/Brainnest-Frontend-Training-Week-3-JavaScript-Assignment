@@ -39,4 +39,4 @@ https://elisa-amaral.github.io/Brainnest-Front-End-Training-Week-3-JavaScript-As
 ## Technology Stack
 
 + HTML index file with nothing but the title tag and the script call
-+ JavaScript (no DOM manipulation at all)
++ JavaScript without DOM manipulation
