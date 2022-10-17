@@ -93,7 +93,7 @@ function validatePlayerSelection(playerSelection, roundName)
         }
     }
 
-    return validationResults
+    return validationResults;
 }
 
 // this function depends on validatePlayerSelection(), there must be no input errors
@@ -186,9 +186,9 @@ function setRoundResults(playerSelection, computerSelection, roundName)
 }
 
 /* 
-this function is called if all the round result in a tied score, it is a recursive function 
+this function is called if all the rounds result in a tied score, it is a recursive function 
 that calls itself infinitely in the unique possibility of counteless sequential tied scores,
-when there is a winner, this function shows the result int the Console and runs wannaPlayAgain() */
+when there is a winner, this function shows the result in the Console and runs wannaPlayAgain() */
 function winnerTakesAll(roundIteraction)
 {
     let roundName = `WINNER-TAKES-ALL #${roundIteraction}`;
