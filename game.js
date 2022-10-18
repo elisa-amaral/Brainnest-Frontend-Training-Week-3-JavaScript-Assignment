@@ -13,11 +13,11 @@ function computerPlay()
     const computerSelection = options[Math.floor(Math.random() * 3)];
     
     /* 
-    // testing the tied score case, computer always selects 
-    "rock" and player input must always be "rock"
-    const computerSelection = "rock" 
-    */
-
+    remove the comment from the line below to test the tied score case, 
+    computer always selects "rock" and player input must always be "rock"
+    then,to break the infine loop, set playerInput to "paper" or "scissors"  */
+    // const computerSelection = "rock" 
+    
     return computerSelection;
 }
 
@@ -199,7 +199,7 @@ function winnerTakesAll(roundIteraction)
     // line division to separate this and previous round in console
     console.log ("===================================================");
 
-    computerSelection = computerPlay()
+    computerSelection = computerPlay();
     setTimeout( () => {
         
         milliseconds++;
@@ -359,7 +359,7 @@ function game()
                     
                     milliseconds++;
                     
-                    const firstRound = 1; // starts at one, increments in function itself if needed
+                    const firstRound = 1; // starts at one, increment happens winnerTakesAll() if needed
                     winnerTakesAll(firstRound);
                 }, milliseconds);
             }
