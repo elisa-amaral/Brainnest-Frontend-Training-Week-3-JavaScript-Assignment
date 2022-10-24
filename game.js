@@ -427,6 +427,7 @@ function wannaPlayAgain()
         console.log("===================================================");
         console.log("===================================================");
         console.log(`Built with love by Elisa Amaral`);
+        console.log(`https://beacons.ai/elisa_amaral`);
         console.log("===================================================");
         console.log("===================================================");
         alert(`Bye! :D`);
