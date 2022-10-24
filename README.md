@@ -38,75 +38,75 @@ If the player chooses to play again, the broswer Console is cleared and the game
 
 ## Screenshot 1: *Welcome Message + Initial Instructions* Alert
 
-![Screenshot](/screenshots/Screenshot_1.jpg)
+![Screenshot](/screenshots/Screenshot_1.png)
 
 ## Screenshot 2: *Console Instructions* Alert
 
-![Screenshot](/screenshots/Screenshot_2.jpg)
+![Screenshot](/screenshots/Screenshot_2.png)
 
 ## Screenshot 3: *Good Luck* Alert
 
-![Screenshot](/screenshots/Screenshot_3.jpg)
+![Screenshot](/screenshots/Screenshot_3.png)
 
 ## Screenshot 4: *Player Selection* Alert
 
-![Screenshot](/screenshots/Screenshot_4.jpg)
+![Screenshot](/screenshots/Screenshot_4.png)
 
 ## Screenshot 5: *Round Results* Console Message
 
-![Screenshot](/screenshots/Screenshot_5.jpg)
+![Screenshot](/screenshots/Screenshot_5.png)
 
 ## Screenshot 6: *Game Results* Console Message (no tied game)
 
-![Screenshot](/screenshots/Screenshot_6.jpg)
+![Screenshot](/screenshots/Screenshot_6.png)
 
 ## Screenshot 7: *Game Results* Console Message (tied game)
 
-![Screenshot](/screenshots/Screenshot_7.jpg)
+![Screenshot](/screenshots/Screenshot_7.png)
 
 ## Screenshot 8: *WINNER-TAKES-ALL Instructions* Alert
 
-![Screenshot](/screenshots/Screenshot_8.jpg)
+![Screenshot](/screenshots/Screenshot_8.png)
 
 ## Screenshot 9: *WINNER-TAKES-ALL Player Selection* Prompt
 
-![Screenshot](/screenshots/Screenshot_9.jpg)
+![Screenshot](/screenshots/Screenshot_9.png)
 
 ## Screenshot 10: *WINNER-TAKES-ALL Round Results* Console Message
 
-![Screenshot](/screenshots/Screenshot_10.jpg)
+![Screenshot](/screenshots/Screenshot_10.png)
 
 ## Screenshot 11: *WINNER-TAKES-ALL Player Selection* Alert (another round needed)
 
-![Screenshot](/screenshots/Screenshot_11.jpg)
+![Screenshot](/screenshots/Screenshot_11.png)
 
 ## Screenshot 12: *WINNER-TAKES-ALL Player Selection* Prompt (another round needed)
 
-![Screenshot](/screenshots/Screenshot_12.jpg)
+![Screenshot](/screenshots/Screenshot_12.png)
 
 ## Screenshot 13: *Game Results* Prompt (after WINNER-TAKES-ALL round\[s\])
 
-![Screenshot](/screenshots/Screenshot_13.jpg)
+![Screenshot](/screenshots/Screenshot_13.png)
 
 ## Screenshot 14: *Wanna-Play-Again* Alert
 
-![Screenshot](/screenshots/Screenshot_14.jpg)
+![Screenshot](/screenshots/Screenshot_14.png)
 
 ## Screenshot 15: *Game Restarted* Alert (player wanna play again)
 
-![Screenshot](/screenshots/Screenshot_15.jpg)
+![Screenshot](/screenshots/Screenshot_15.png)
 
 ## Screenshot 16: *Wanna-Play-Again* Alert (player doesn't want to play again)
 
-![Screenshot](/screenshots/Screenshot_16.jpg)
+![Screenshot](/screenshots/Screenshot_16.png)
 
 ## Screenshot 17: *Goodbye* Alert (player doesn't want to play again)
 
-![Screenshot](/screenshots/Screenshot_17.jpg)
+![Screenshot](/screenshots/Screenshot_17.png)
 
 ## Screenshot 18: *Game Over* Console Message (player doesn't want to play again)
 
-![Screenshot](/screenshots/Screenshot_18.jpg)
+![Screenshot](/screenshots/Screenshot_18.png)
 
 ## Technology Stack
 
