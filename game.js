@@ -7,58 +7,52 @@
  ************************************************************
  */
 
-function computerPlay()
-{   
+function computerPlay() {
     const options = ["rock", "paper", "scissors"];
     const computerSelection = options[Math.floor(Math.random() * 3)];
-    
+
     /* 
     remove the comment from the line below to test the tied score case, 
     computer always selects "rock" and player input must always be "rock"
     then,to break the infine loop, set playerInput to "paper" or "scissors"  */
     // const computerSelection = "rock" 
-    
+
     return computerSelection;
 }
 
-function playerPlay(roundName)
-{   
+function playerPlay(roundName) {
     let playerSelection = (prompt(`Type in your selection of ROUND ${roundName}`));
     playerSelection = playerSelection.toLowerCase();
     return playerSelection;
 }
 
-function validatePlayerSelection(playerSelection, roundName)
-{
+function validatePlayerSelection(playerSelection, roundName) {
     let validationResults = []; // empty array
     validationResults['inputIsInvalid'] = false;
-    
+
     // player doesn't type in anything
-    if (playerSelection.length == 0)
-    {
+    if (playerSelection.length == 0) {
         validationResults['inputIsInvalid'] = true;
         validationResults['errorMessage'] = `Your answer didn't contain your selection of ROUND ${roundName}. Please try again.`;
     }
-    else if (!playerSelection.match("^[a-zA-Z ]+$"))
-    {
+    else if (!playerSelection.match("^[a-zA-Z ]+$")) {
         // player inputs special characters, spaces or digits in the selection answer 
         validationResults['inputIsInvalid'] = true;
         validationResults['errorMessage'] = `You typed in one or more numbers, special characters or symbols in your selection answer of ROUND ${roundName}. That is not allowed. Here is what you typed in: "${playerSelection}". Please try again.`;
     }
-    else if (playerSelection.split(" ").length == 1)
-    {
+    else if (playerSelection.split(" ").length == 1) {
         if (playerSelection != "rock"
-            && 
+            &&
             playerSelection != "paper"
             &&
             playerSelection != "scissors") {
 
             validationResults['inputIsInvalid'] = true
-            validationResults['errorMessage'] =  `Your input must contain the exact word indicating your selection for ROUND ${roundName}. Either "ROCK" or "PAPER" or "SCISSORS". Here's what you typed in: "${playerSelection}". Please try again.`;
+            validationResults['errorMessage'] = `Your input must contain the exact word indicating your selection for ROUND ${roundName}. Either "ROCK" or "PAPER" or "SCISSORS". Here's what you typed in: "${playerSelection}". Please try again.`;
         }
     }
     else if (playerSelection.split(" ").length > 1)  // input has more than one word
-    {        
+    {
         // does it have more than one selection option?
         const optionRock = ["rock"];
         const optionPaper = ["paper"];
@@ -66,30 +60,28 @@ function validatePlayerSelection(playerSelection, roundName)
         const hasOptionRock = optionRock.some(option => playerSelection.includes(option));
         const hasOptionPaper = optionPaper.some(option => playerSelection.includes(option));
         const hasOptionScissors = optionScissors.some(option => playerSelection.includes(option));
-        
+
         // input has two or three of the options at whichever order
-        if((hasOptionRock && hasOptionPaper) 
-           || 
-           (hasOptionRock && hasOptionScissors)
-           ||
-           (hasOptionPaper && hasOptionScissors)
-           ||
-           (hasOptionRock && hasOptionPaper && hasOptionScissors)) {
-            
+        if ((hasOptionRock && hasOptionPaper)
+            ||
+            (hasOptionRock && hasOptionScissors)
+            ||
+            (hasOptionPaper && hasOptionScissors)
+            ||
+            (hasOptionRock && hasOptionPaper && hasOptionScissors)) {
+
             validationResults['inputIsInvalid'] = true;
             validationResults['errorMessage'] = `You typed in more than one of the possible selection options for ROUND ${roundName}. Your answer must contain only ONE selection: "ROCK" or "PAPER" or "SCISSORS" Here's what you typed in: "${playerSelection}". Please try again.`;
-        } 
-        else if (hasOptionRock || hasOptionPaper || hasOptionScissors)
-        {
+        }
+        else if (hasOptionRock || hasOptionPaper || hasOptionScissors) {
             // input has multiple words and has one of the three options
             validationResults['inputIsInvalid'] = true;
-            validationResults['errorMessage'] =  `You must type in only ONE word indicating your selection for ROUND ${roundName}: either "ROCK" or "PAPER" or "SCISSORS". Here's what you typed in: "${playerSelection}". Please try again.`;
+            validationResults['errorMessage'] = `You must type in only ONE word indicating your selection for ROUND ${roundName}: either "ROCK" or "PAPER" or "SCISSORS". Here's what you typed in: "${playerSelection}". Please try again.`;
         }
-        else 
-        {
+        else {
             // input has multiple words and none of the three possible options 
             validationResults['inputIsInvalid'] = true;
-            validationResults['errorMessage'] =  `Your input doesn't have any of the three selection options for ROUND ${roundName}. You must type in ONE word indicating your selection: "ROCK" or "PAPER" or "SCISSORS". Here's what you typed in: "${playerSelection}". Please try again.`;
+            validationResults['errorMessage'] = `Your input doesn't have any of the three selection options for ROUND ${roundName}. You must type in ONE word indicating your selection: "ROCK" or "PAPER" or "SCISSORS". Here's what you typed in: "${playerSelection}". Please try again.`;
         }
     }
 
@@ -97,18 +89,14 @@ function validatePlayerSelection(playerSelection, roundName)
 }
 
 // this function depends on validatePlayerSelection(), there must be no input errors
-function playRound(playerSelection, computerSelection) 
-{
+function playRound(playerSelection, computerSelection) {
     let roundResults = []; // empty array
     roundResults['playerWon'] = false;
     roundResults['scoreIsTied'] = false;
 
-    if (playerSelection != computerSelection)
-    {
-        if (playerSelection == "rock")
-        {
-            if (computerSelection == "scissors")
-            {
+    if (playerSelection != computerSelection) {
+        if (playerSelection == "rock") {
+            if (computerSelection == "scissors") {
                 roundResults['playerWon'] = true;
             }
             /*
@@ -117,10 +105,8 @@ function playRound(playerSelection, computerSelection)
              roundResults['playerWon'] continues to be false
             */
         }
-        else if (playerSelection == "paper")
-        {
-            if (computerSelection == "rock")
-            {
+        else if (playerSelection == "paper") {
+            if (computerSelection == "rock") {
                 roundResults['playerWon'] = true;
             }
             /*
@@ -129,10 +115,8 @@ function playRound(playerSelection, computerSelection)
              roundResults['playerWon'] continues to be false
             */
         }
-        else if (playerSelection == "scissors")
-        {
-            if (computerSelection == "paper")
-            {
+        else if (playerSelection == "scissors") {
+            if (computerSelection == "paper") {
                 roundResults['playerWon'] = true;
             }
 
@@ -143,11 +127,10 @@ function playRound(playerSelection, computerSelection)
             */
         }
     }
-    else 
-    {
+    else {
         roundResults['scoreIsTied'] = true;
     }
-    
+
     return roundResults;
 }
 
@@ -155,19 +138,16 @@ function playRound(playerSelection, computerSelection)
 /* 
 this function calls playRound() and returns its result to game(), plus it gives 
 visual feedback to the player in the Console showing the results from playRound() */
-function setRoundResults(playerSelection, computerSelection, roundName)
-{
+function setRoundResults(playerSelection, computerSelection, roundName) {
     const roundResults = playRound(playerSelection, computerSelection)
 
     console.log(`|| ROUND ${roundName} ||`)
     console.log(`YOU chose: ${playerSelection.toUpperCase()}`)
     console.log(`COMPUTER chose: ${computerSelection.toUpperCase()}`)
 
-    if (!roundResults['scoreIsTied'])
-    {   
+    if (!roundResults['scoreIsTied']) {
         // player won round
-        if (roundResults['playerWon']) 
-        {
+        if (roundResults['playerWon']) {
             console.log(`You WON this round! ${playerSelection.toLocaleUpperCase()} beats ${computerSelection.toLocaleUpperCase()}.`);
             console.log('You get +1 point.');
         }
@@ -189,64 +169,56 @@ function setRoundResults(playerSelection, computerSelection, roundName)
 this function is called if all the rounds result in a tied score, it is a recursive function 
 that calls itself infinitely in the unique possibility of counteless sequential tied scores,
 when there is a winner, this function shows the result in the Console and runs wannaPlayAgain() */
-function winnerTakesAll(roundIteraction)
-{
+function winnerTakesAll(roundIteraction) {
     let roundName = `WINNER-TAKES-ALL #${roundIteraction}`;
     let playerSelection;
     let computerSelection;
     let milliseconds = 0;
-    
+
     // line division to separate this and previous round in console
-    console.log ("===================================================");
+    console.log("===================================================");
 
     computerSelection = computerPlay();
-    setTimeout( () => {
-        
+    setTimeout(() => {
+
         milliseconds++;
-        
-        while (true)
-        {   
+
+        while (true) {
             playerSelection = playerPlay(roundName);
             validationResults = validatePlayerSelection(playerSelection, roundName);
 
-            if (validationResults['inputIsInvalid'])
-            {
+            if (validationResults['inputIsInvalid']) {
                 alert(validationResults['errorMessage']);
             }
-            else 
-            {
+            else {
                 break;
             }
         }
     }, milliseconds);
 
-    
-    setTimeout( () => {
+
+    setTimeout(() => {
 
         const roundResults = setRoundResults(playerSelection, computerSelection, roundName);
 
-        if (roundResults['scoreIsTied'])
-        {
+        if (roundResults['scoreIsTied']) {
             alert(`Can you BELIEVE it? The score is TIED again! Let's run another WINNER-TAKES-ALL ROUND`);
             roundIteraction++;
             winnerTakesAll(roundIteraction);
         }
-        else
-        {
-            if(roundResults['playerWon'])
-            {
+        else {
+            if (roundResults['playerWon']) {
                 // division line
                 console.log("===================================================");
 
                 console.log(`You TOOK THEM ALL!`);
                 console.log(`${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}!`);
                 console.log(`Congratulations!`);
-                
+
                 wannaPlayAgain();
-                
+
             }
-            else 
-            {
+            else {
                 // division line
                 console.log("===================================================");
 
@@ -263,13 +235,12 @@ function winnerTakesAll(roundIteraction)
 /*  
 this function runs 5 rounds and displays the final results, it calls winnerTakesAll()
 if needed and it calls wannaPlayAgain() if there is a winner without a tied score  */
-function game()
-{    
+function game() {
     /* 
     declaring variables in function scope otherwise they would only be accessible in each setTimeout scope, using let because variables values will change in every iteraction 
     */
     let computerSelection;
-    let playerSelection; 
+    let playerSelection;
     let computerScore = 0;
     let playerScore = 0;
     let milliseconds = 0;
@@ -282,44 +253,37 @@ function game()
 
     alert(`Great! Let's START the game.
           Good Luck!`);
-    
-    for (let i = 0; i < 5; i++)
-    {  
-        setTimeout( () => {
-            
+
+    for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+
             milliseconds++;
 
             computerSelection = computerPlay();
-            while (true)
-            {   
+            while (true) {
                 playerSelection = playerPlay(i + 1);
                 const validationResults = validatePlayerSelection(playerSelection, i + 1);
 
-                if (validationResults['inputIsInvalid'])
-                {
+                if (validationResults['inputIsInvalid']) {
                     alert(validationResults['errorMessage']);
                 }
-                else 
-                {
+                else {
                     break;
                 }
             }
         }, milliseconds);
-       
-        setTimeout( () => {
-            
+
+        setTimeout(() => {
+
             milliseconds++;
 
             const roundResults = setRoundResults(playerSelection, computerSelection, i + 1);
 
-            if (!roundResults['scoreIsTied'])
-            {
-                if(roundResults['playerWon']) 
-                {
+            if (!roundResults['scoreIsTied']) {
+                if (roundResults['playerWon']) {
                     playerScore++;
                 }
-                else 
-                {
+                else {
                     computerScore++;
                 }
             }
@@ -331,97 +295,87 @@ function game()
 
     } // end of for loop
 
-    setTimeout( () => {
+    setTimeout(() => {
 
         milliseconds++;
 
         if (playerScore > computerScore) // player won
-            {
-                console.log(`Score: YOU |${playerScore}| x |${computerScore}| COMPUTER`);
-                console.log('You WON the game! Congratulations!');
-                wannaPlayAgain();
-            }
-            else if (playerScore < computerScore) // player lost
-            {
-                console.log(`Final Score: YOU |${playerScore}| x |${computerScore}| COMPUTER`);
-                console.log('Oh oh, you lost the game. Better luck NEXT TIME!');
-                wannaPlayAgain();
-            }
-            else // game is tied, run winnerTakesAll until there's a winner
-            {
-                console.log('The game is TIED!');
-                console.log(`Final Score: YOU |${playerScore}| x |${computerScore}| COMPUTER`);
-                
-                alert(`Welcome to the WINNER-TAKES-ALL ROUND. Now you get ONE chance against the computer and the winner takes ALL the rounds and WINS THE GAME. If the score is tied again, no worries, there will be infinite WINNER-TAKES-ALL rounds UNTIL THERE IS A WINNER! 
+        {
+            console.log(`Score: YOU |${playerScore}| x |${computerScore}| COMPUTER`);
+            console.log('You WON the game! Congratulations!');
+            wannaPlayAgain();
+        }
+        else if (playerScore < computerScore) // player lost
+        {
+            console.log(`Final Score: YOU |${playerScore}| x |${computerScore}| COMPUTER`);
+            console.log('Oh oh, you lost the game. Better luck NEXT TIME!');
+            wannaPlayAgain();
+        }
+        else // game is tied, run winnerTakesAll until there's a winner
+        {
+            console.log('The game is TIED!');
+            console.log(`Final Score: YOU |${playerScore}| x |${computerScore}| COMPUTER`);
+
+            alert(`Welcome to the WINNER-TAKES-ALL ROUND. Now you get ONE chance against the computer and the winner takes ALL the rounds and WINS THE GAME. If the score is tied again, no worries, there will be infinite WINNER-TAKES-ALL rounds UNTIL THERE IS A WINNER! 
                 Good luck!`);
 
-                setTimeout( () => {
-                    
-                    milliseconds++;
-                    
-                    const firstRound = 1; // starts at one, increment happens winnerTakesAll() if needed
-                    winnerTakesAll(firstRound);
-                }, milliseconds);
-            }
+            setTimeout(() => {
+
+                milliseconds++;
+
+                const firstRound = 1; // starts at one, increment happens winnerTakesAll() if needed
+                winnerTakesAll(firstRound);
+            }, milliseconds);
+        }
     }, milliseconds);
 } // end of game function
 
 
-function restartGame(playerAnswer)
-{
+function restartGame(playerAnswer) {
     let validationResults = [] // empty array
     validationResults['inputIsInvalid'] = false;
     validationResults['mustRestartGame'] = false;
 
     playerAnswer = playerAnswer.toUpperCase();
-    if(playerAnswer == "YES")
-    {
+    if (playerAnswer == "YES") {
         validationResults['mustRestartGame'] = true;
     }
-    else if (playerAnswer != "NO")
-    {
+    else if (playerAnswer != "NO") {
         // player typed in something different from "YES" or "NO"
         validationResults['inputIsInvalid'] = true;
         validationResults['errorMessage'] = `You didn't type in "YES" or "NO". Please try again.
         Do you wanna play again? Type in "YES" or "NO".`;
     }
-    
+
     return validationResults;
 }
 
-function wannaPlayAgain()
-{
+function wannaPlayAgain() {
     let mustPlayAgain = false;
 
     // division line
     console.log("===================================================");
-    
-    while (true)
-    {   
+
+    while (true) {
         const restartResults = restartGame(prompt(`Do you wanna play again? (Type in YES or NO)`))
-        if (restartResults['inputIsInvalid'])
-        {
+        if (restartResults['inputIsInvalid']) {
             alert(restartResults['errorMessage']);
         }
-        else 
-        {
-            if (restartResults['mustRestartGame'])
-            {
+        else {
+            if (restartResults['mustRestartGame']) {
                 mustPlayAgain = true;
             }
-            
+
             break;
         }
     }
 
-    if (mustPlayAgain)
-    {
+    if (mustPlayAgain) {
         alert(`Let's play again! Click on OK to start.`);
         console.clear();
         game(); // restarts 
     }
-    else 
-    {
+    else {
         console.log("===================================================");
         console.log("GAME OVER");
         console.log("===================================================");

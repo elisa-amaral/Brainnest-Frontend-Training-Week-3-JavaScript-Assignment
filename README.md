@@ -2,6 +2,10 @@
 
 This project is the Week 3 Assignment of the Brainnest Front-End Training. I've created a JavaScript-only ROCK PAPER SCISSORS game with HTML elements, no CSS styling and no DOM manipulation. Even so, the game interacts with the user in real time throught alerts, prompts and console messages. 
 
+## Project Link
+
+https://elisa-amaral.github.io/Brainnest-Front-End-Training-Week-3-JavaScript-Assignment/
+
 ## How It Works
 
 The player (the user) will be playing against the computer (the JavaScript algorithm). Prompts are used to collect the user selection in each round (input must be "ROCK" or "PAPER" or "SCISSORS"). Any necessary instructions are displayed with alerts, such as the game welcoming message or something like *"Your answer didn't contain your selection of ROUND 1. Please try again.* in case of player input validation errors.
@@ -32,9 +36,77 @@ At the end of the game, when there is a winner, the player is asked:  *Do you wa
 
 If the player chooses to play again, the broswer Console is cleared and the game restarts. If the player chooses not to play again, a simple goodbye message is displayed through an alert and the project credentials are displayed in the browser Console.
 
-## Project Link
+## Screenshot 1: *Welcome Message + Initial Instructions* Alert
 
-https://elisa-amaral.github.io/Brainnest-Front-End-Training-Week-3-JavaScript-Assignment/
+![Screenshot](/screenshots/Screenshot_1.jpg)
+
+## Screenshot 2: *Console Instructions* Alert
+
+![Screenshot](/screenshots/Screenshot_2.jpg)
+
+## Screenshot 3: *Good Luck* Alert
+
+![Screenshot](/screenshots/Screenshot_3.jpg)
+
+## Screenshot 4: *Player Selection* Alert
+
+![Screenshot](/screenshots/Screenshot_4.jpg)
+
+## Screenshot 5: *Round Results* Console Message
+
+![Screenshot](/screenshots/Screenshot_5.jpg)
+
+## Screenshot 6: *Game Results* Console Message (No Tied Game)
+
+![Screenshot](/screenshots/Screenshot_6.jpg)
+
+## Screenshot 7: *Game Results* Console Message (Tied Game)
+
+![Screenshot](/screenshots/Screenshot_7.jpg)
+
+## Screenshot 8: *WINNER-TAKES-ALL Instructions* Alert
+
+![Screenshot](/screenshots/Screenshot_8.jpg)
+
+## Screenshot 9: *WINNER-TAKES-ALL Player Selection* Prompt
+
+![Screenshot](/screenshots/Screenshot_9.jpg)
+
+## Screenshot 10: *WINNER-TAKES-ALL Round Results* Console Message
+
+![Screenshot](/screenshots/Screenshot_10.jpg)
+
+## Screenshot 11: *WINNER-TAKES-ALL Player Selection* Alert (Another Round Needed)
+
+![Screenshot](/screenshots/Screenshot_11.jpg)
+
+## Screenshot 12: *WINNER-TAKES-ALL Player Selection* Prompt (Another Round Needed)
+
+![Screenshot](/screenshots/Screenshot_12.jpg)
+
+## Screenshot 13: *Game Results* Prompt (After WINNER-TAKES-ALL Round\[s\])
+
+![Screenshot](/screenshots/Screenshot_13.jpg)
+
+## Screenshot 14: *Wanna-Play-Again* Alert
+
+![Screenshot](/screenshots/Screenshot_14.jpg)
+
+## Screenshot 15: *Game Restarted* Alert (player wanna play again)
+
+![Screenshot](/screenshots/Screenshot_15.jpg)
+
+## Screenshot 16: *Wanna-Play-Again* Alert (player doesn't want to play again)
+
+![Screenshot](/screenshots/Screenshot_16.jpg)
+
+## Screenshot 17: *Goodbye* Alert (player doesn't want to play again)
+
+![Screenshot](/screenshots/Screenshot_17.jpg)
+
+## Screenshot 18: *Game Over* Console Message (player doesn't want to play again)
+
+![Screenshot](/screenshots/Screenshot_18.jpg)
 
 ## Technology Stack
 
