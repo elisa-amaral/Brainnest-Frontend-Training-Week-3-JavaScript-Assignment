@@ -1,8 +1,8 @@
-# Brainnest Frontend Training Week 3 JavaScript Assignment
+# Brainnest Frontend Training Week 3: JavaScript Assignment
 
 This project is the Week 3 Assignment of the Brainnest Frontend Training. I've created a JavaScript-only ROCK PAPER SCISSORS game with HTML elements, no CSS styling and no DOM manipulation. Even so, the game interacts with the user in real time throught alerts, prompts and console messages. 
 
-## Project Link
+## Project Website
 
 https://elisa-amaral.github.io/Brainnest-Front-End-Training-Week-3-JavaScript-Assignment/
 
